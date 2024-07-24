@@ -1,0 +1,145 @@
+.forWhat {
+  &__wrapper {
+    @include fluid(margin-top, 30px, 90px);
+    @include fluid(margin-bottom, 60px, 80px);
+  }
+
+  &__container {
+    @include fluid(width, 962px, 1394px);
+    max-width: 1394px;
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 25px, 50px);
+    @include fluid(font-size, 27px, 52px);
+
+    .title__fon {
+      @include fluid(font-size, 23px, 43px);
+    }
+  }
+
+  &__subtitle {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    @include fluid(margin-bottom, 31px, 27px);
+    @include fluid(font-size, 14px, 21px);
+    text-align: center;
+    text-wrap: balance;
+    color: #104441;
+    font-weight: 300;
+    line-height: 1.5;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__inner {
+    background: #eee;
+    border-radius: 70px;
+    @include fluid(padding-top, 51px, 78px);
+    @include fluid(padding-bottom, 27px, 59px);
+    @include fluid(padding-left, 25px, 97px);
+    @include fluid(padding-right, 25px, 70px);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: .75fr 1fr .85fr;
+    gap: 20px;
+    @include fluid(gap, 20px, 30px);
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      @include fluid(gap, 20px, 28px);
+      @include fluid(margin-top, 30px, 50px);
+    }
+
+    &-box {
+      display: flex;
+      @include fluid(gap, 19px, 26px);
+    }
+
+    &-left {
+      font-weight: 900;
+      color: #314240;
+      transform: rotate(-6.34deg);
+      @include fluid(font-size, 11px, 15px);
+    }
+
+    &-text {
+      @include fluid(max-width, 240px, 309px);
+      @include fluid(font-size, 14px, 18px);
+      font-weight: 300;
+      color: #07211F;
+      letter-spacing: -.02em;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &-img {
+      position: relative;
+      @include fluid(height, 256px, 390px);
+      @include fluid(right, 0px, -20px);
+    }
+  }
+}
+
+@media(max-width:992px) {
+  .forWhat {
+    &__container {
+      width: unset;
+      max-width: 720px;
+    }
+
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: dense;
+
+      &-inner {
+        margin-top: 0;
+      }
+
+      &-img {
+        grid-column: span 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .forWhat {
+    &__container {
+      max-width: 540px;
+    }
+  }
+}
+
+@media(max-width:576px) {
+  .forWhat {
+    &__container {
+      max-width: unset;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+
+      &-inner {
+        max-width: 276px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &-img {
+        grid-column: unset;
+        order: 1;
+      }
+    }
+  }
+}

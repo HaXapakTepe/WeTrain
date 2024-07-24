@@ -1,0 +1,59 @@
+.title {
+  @include fluid(font-size, 32px, 52px);
+  line-height: 1.15;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(-6.81deg) skew(-6.81deg);
+  text-align: center;
+
+  &--initial {
+    text-transform: initial;
+  }
+
+  &--dark {
+    color: #07211F;
+  }
+
+  &--alt {
+    color: #07211F;
+
+    .title__fon {
+      background-color: #1A8981;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    @include fluid(top, 4px, 6px);
+    display: inline;
+    @include fluid(width, 29px, 45px);
+    @include fluid(height, 29px, 45px);
+  }
+
+  &__fon {
+    @include fluid(font-size, 25px, 43px);
+    @include fluid(padding-left, 12px, 21px);
+    @include fluid(padding-right, 12px, 21px);
+    @include fluid(padding-top, 4px, 8px);
+    @include fluid(padding-bottom, 4px, 8px);
+    border-radius: 26px;
+    background-color: #FF2A6E;
+    color: #fff;
+
+    &--initial {
+      text-transform: initial;
+    }
+  }
+}
+
+.hotPink {
+  color: #FF2A6E;
+}
+
+.bluishGreen {
+  color: #07F1E0
+}
+
+.pinkishСoral {
+  color: #1A8981
+}

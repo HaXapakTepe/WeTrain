@@ -1,0 +1,122 @@
+.why {
+  &__wrapper {
+    @include fluid(margin-top, 52px, 80px);
+    @include fluid(margin-bottom, 45px, 103px);
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 38px, 74px);
+  }
+
+  &__table {
+    max-width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: .7fr 1fr 1fr;
+    @include fluid(padding-bottom, 0px, 45px);
+    margin-bottom: 45px;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 95%;
+      border-left: 1px dashed #BABABA;
+    }
+
+    &::after {
+      left: 24.5%;
+    }
+
+    &::before {
+      right: 37.5%;
+    }
+
+    &-icon {
+      @include fluid(height, 16px, 25px);
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include fluid(padding-top, 12px, 15px);
+      @include fluid(padding-bottom, 12px, 15px);
+      @include fluid(font-size, 13.5px, 21px);
+      font-weight: 700;
+      text-align: center;
+      color: #07211F;
+      border-bottom: 1px dashed #BABABA;
+      letter-spacing: -.02em;
+      text-wrap: balance;
+
+      &:nth-child(-n+3) {
+        @include fluid(padding-bottom, 20px, 39px);
+      }
+
+      &:nth-child(3n+4) {
+        color: #5D6A69;
+        padding-right: 10px;
+      }
+
+      &:nth-child(3n+5) {
+        color: #449E98;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      &:nth-child(3n+6) {
+        color: #7C7C7C;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .why {
+    &__table {
+      grid-template-columns: repeat(2, 1fr);
+
+      &::after {
+        left: 50%;
+      }
+
+      &::before {
+        content: none;
+      }
+
+      &-text {
+        &:nth-child(3n-2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:576px) {
+  .why {
+    &__title {
+      max-width: 285px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__table {
+      &-text {
+
+        &:nth-child(3n+4),
+        &:nth-child(3n+5),
+        &:nth-child(3n+6) {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}

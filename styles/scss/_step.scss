@@ -1,0 +1,122 @@
+.step {
+  &__wrapper {
+    @include fluid(margin-top, 68px, 173px);
+    @include fluid(margin-bottom, 135px, 160px);
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 64px, 70px);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    counter-reset: num;
+    justify-content: center;
+    max-width: 1150px;
+    @include fluid(margin-right, 0px, 15px);
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include fluid(padding-top, 60px, 72px);
+    @include fluid(padding-bottom, 39px, 47px);
+    @include fluid(padding-left, 24px, 32px);
+    @include fluid(padding-right, 24px, 32px);
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: unset;
+      @include fluid(min-height, 401px, 485px);
+      @include fluid(height, 401px, 485px);
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+      }
+    }
+
+    &:last-child {
+      .step__item {
+        &-num {
+          &:before {
+            -webkit-text-stroke: 5px #07F1E0;
+            text-stroke: 5px #07F1E0;
+          }
+        }
+      }
+    }
+
+    &-num {
+      text-align: center;
+      margin-bottom: 34px;
+
+      &:before {
+        content: counter(num, decimal-leading-zero);
+        counter-increment: num;
+        @include fluid(font-size, 70px, 94px);
+        font-weight: 900;
+        line-height: 1.1;
+        text-align: center;
+        color: transparent;
+        -webkit-text-stroke: 5px #FF2A6D;
+        text-stroke: 5px #FF2A6D;
+      }
+    }
+
+    &-text {
+      @include fluid(margin-bottom, 12px, 17px);
+      @include fluid(font-size, 20px, 24px);
+      text-align: center;
+      text-wrap: balance;
+      font-weight: 300;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}
+
+@media(max-width:992px) {
+  .step {
+    &__inner {
+      max-width: 470px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__item {
+      max-width: 285px;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .step {
+    &__inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__item {
+      max-width: 236px;
+
+      &:not(:first-child) {
+        margin-top: -15px;
+      }
+    }
+  }
+}

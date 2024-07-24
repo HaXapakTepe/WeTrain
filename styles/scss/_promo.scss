@@ -1,0 +1,317 @@
+.promo {
+  &--alt {
+    .promo {
+      &__wrapper {
+        @include fluid(margin-top, 30px, 28px);
+        @include fluid(margin-bottom, 100px, 197px);
+      }
+
+      &__item {
+        @include fluid(margin-top, 0px, 42px);
+
+        &-title {
+          @include fluid(margin-bottom, 18px, 29px);
+        }
+
+        &-text {
+          color: #273A38;
+          @include fluid(margin-bottom, 35px, 48px);
+        }
+      }
+
+      &__box {
+        grid-template-columns: 1fr .73fr;
+
+        &-text {
+          max-width: 154px;
+          color: #676767;
+
+          span {
+            color: #ACACAC;
+          }
+        }
+      }
+
+      &__elem {
+        &-img {
+          margin-right: unset;
+          @include fluid(height, 337px, 746px);
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @include fluid(margin-top, 25px, 60px);
+    @include fluid(margin-bottom, 125px, 257px);
+  }
+
+  &__inner {
+    max-width: 1140px;
+    @include fluid(margin-left, 0px, 28px);
+    display: grid;
+    grid-template-columns: .9fr 1fr;
+    gap: 23px;
+  }
+
+  &__item {
+    &-title {
+      @include fluid(font-size, 39px, 61px);
+      text-transform: initial;
+      @include fluid(margin-bottom, 14px, 29px);
+      transform: unset;
+      text-align: left;
+      line-height: 1.1;
+    }
+
+    &-text {
+      @include fluid(max-width, 272px, 427px);
+      @include fluid(font-size, 14px, 22px);
+      @include fluid(margin-bottom, 35px, 61px);
+      line-height: 1.45;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .btn {
+      @include fluid(min-width, 100px, 253px);
+    }
+  }
+
+  &__box {
+    @include fluid(max-width, 350px, 520px);
+    display: grid;
+    grid-template-columns: 1fr .53fr;
+    @include fluid(column-gap, 20px, 5px);
+
+    &-icon {
+      height: 57px;
+      @include fluid(margin-top, 15px, 25px);
+      margin-bottom: 7px;
+      @include fluid(margin-bottom, 7px, 18px);
+    }
+
+    &-text {
+      grid-column: 2/3;
+      line-height: 1.4;
+      @include fluid(font-size, 13px, 16px);
+
+      span {
+        color: #ACACAC;
+      }
+    }
+  }
+
+  &__elem {
+    position: relative;
+
+    &-imgSmall {
+      position: absolute;
+      top: 0;
+      @include fluid(left, 160px, 0px);
+      @include fluid(height, 196px, 364px);
+    }
+
+    &-img {
+      margin-left: auto;
+      @include fluid(height, 352px, 654px);
+    }
+  }
+
+  &__block {
+    position: relative;
+
+    &-inner {
+      position: absolute;
+      @include fluid(top, 10px, 63px);
+      @include fluid(left, -25px, 23px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(255, 255, 255, .6);
+      border-radius: 999px;
+      @include fluid(padding-top, 8px, 18px);
+      @include fluid(padding-bottom, 8px, 18px);
+      @include fluid(padding-left, 6px, 13px);
+      @include fluid(padding-right, 6px, 13px);
+      z-index: 1;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @include fluid(width, 1.5px, 3px);
+        @include fluid(height, 6px, 12px);
+        background-color: #FF2A6D;
+        border-radius: .45px;
+      }
+
+      &::before {
+        @include fluid(top, -3px, -6px);
+      }
+
+      &::after {
+        @include fluid(bottom, -3px, -6px);
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include fluid(gap, 16px, 35px);
+      border-radius: 999px;
+      border: 1px dashed #D9D9D9;
+      @include fluid(padding-top, 22px, 48px);
+      @include fluid(padding-bottom, 22px, 48px);
+      @include fluid(padding-left, 12px, 25px);
+      @include fluid(padding-right, 12px, 25px);
+    }
+
+    &-text {
+      text-align: center;
+      text-wrap: balance;
+      font-weight: 500;
+      color: #1B1B1B;
+      @include fluid(font-size, 8px, 16px);
+      @include fluid(max-width, 75px, 162px);
+      line-height: 1.45;
+    }
+
+    &-icon {
+      @include fluid(height, 43px, 95px);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .promo {
+    &--alt {
+      .promo {
+        &__elem {
+          &-img {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .promo {
+    &--alt {
+      .promo {
+        &__box {
+          position: relative;
+          display: flex;
+
+          &-icon {
+            position: absolute;
+            top: -80%;
+            left: 50%;
+            transform: translateX(-50%) rotate(-30deg);
+          }
+
+          &-text {
+            grid-column: 2/3;
+            max-width: 114px;
+            margin-top: 4px;
+          }
+        }
+
+        &__elem {
+          &-img {
+            margin-right: unset;
+            margin-left: unset;
+          }
+        }
+      }
+    }
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__box {
+      grid-template-columns: 1fr .3fr;
+
+      &-text {
+        grid-column: 1/3;
+      }
+    }
+
+    &__item {
+      .btn {
+        min-width: unset;
+      }
+    }
+
+    &__elem {
+      &-imgSmall {
+        left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promo {
+    &__inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__elem {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+
+      &-imgSmall {
+        left: 0;
+      }
+
+      &-img {
+        margin-right: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .promo {
+    &--alt {
+      .promo {
+        &__box {
+          &-icon {
+            height: 37px;
+            top: -65%;
+            left: 58%;
+          }
+        }
+
+        &__block {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    &__inner {
+      justify-items: start;
+    }
+
+    &__box {
+      &-text {
+        margin-top: -10px;
+        text-align: right;
+      }
+    }
+  }
+}

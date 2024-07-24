@@ -1,0 +1,127 @@
+.about {
+  &--alt {
+    .about {
+      &__wrapper {
+        @include fluid(margin-top, 100px, 197px);
+        @include fluid(margin-bottom, 30px, 90px);
+      }
+
+      &__inner {
+        @include fluid(gap, 20px, 94px);
+      }
+
+      &__item {
+        &-num {
+          span {
+            color: #1A8981;
+
+            &::after {
+              background: linear-gradient(92.86deg, rgb(233, 235, 240) 4.085%, rgb(223, 227, 236) 96.088%);
+            }
+          }
+        }
+
+        &-text {
+          color: #104441;
+          line-height: 1.5;
+          @include fluid(margin-bottom, 12px, 18px);
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @include fluid(margin-top, 125px, 257px);
+    @include fluid(margin-bottom, 27px, 115px);
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 43px, 99px);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include fluid(gap, 30px, 94px);
+
+    &:has(+*) {
+      @include fluid(margin-bottom, 60px, 100px);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-num {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include fluid(gap, 4px, 7px);
+      @include fluid(margin-bottom, 15px, 20px);
+
+      span {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        @include fluid(padding-left, 4px, 8px);
+        @include fluid(padding-right, 4px, 8px);
+        @include fluid(font-size, 42px, 68px);
+        color: #07F1E0;
+        line-height: 1.1;
+        font-weight: 900;
+        transform: skewY(-3.81deg);
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 9.24px;
+          transform:  skew(-3.81deg);
+          background: linear-gradient(92.86deg, rgb(22, 22, 22) 4.085%, rgb(16, 16, 16) 96.088%);
+          z-index: -1;
+        }
+      }
+    }
+
+    &-text {
+      text-align: center;
+      @include fluid(font-size, 16px, 25px);
+      @include fluid(margin-bottom, 22px, 32px);
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &-icon {
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media(max-width:992px) {
+  .about {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__item-line {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

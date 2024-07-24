@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./assets/images/logo.svg" type="x-icon" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<link rel="stylesheet" href="./styles/css/normalize.css" />
+	<link rel="stylesheet" href="./styles/css/style.css?v=0.0001" />
+	<title>WeTrain</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<picture class="wrapper__bg">
+			<source srcset="./assets/images/all-bg-m.svg" media="(max-width: 576px)">
+			<img src="./assets/images/all-bg.svg" alt="Картинка с размерами">
+		</picture>
+
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a class="logo" href="#">
+						<img class="logo__img" src="./assets/images/logo.svg" alt="" />
+					</a>
+					<nav class="menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link" href="#" data-goto=".footer">
+									Функции
+								</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">
+									Платформа
+								</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">
+									Процесс работы
+								</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">
+									Отзывы
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<a class="btn btn--header" href="https://lk.wetrain.ru/">
+						Войти
+					</a>
+					<div class="burger">
+						<div class="burger__line"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+
+			<section class="promo">
+				<div class="promo__wrapper">
+					<div class="container">
+						<div class="promo__inner">
+							<div class="promo__item">
+								<h1 class="promo__item-title title">
+									Найди
+									<br>
+									клиентов
+									<br>
+									на <img class="title__icon" src="./assets/images/icons/wifi.svg" alt="">
+									<span class="hotPink">онлайн</span>
+									<br>
+									<span class="bluishGreen">тренировки</span>
+								</h1>
+								<p class="promo__item-text">
+									Размести свою анкету и <span>привлеки новых клиентов</span>, работай на трендовой платформе и легко
+									отслеживай
+									прогресс
+								</p>
+								<div class="promo__box">
+									<a class="btn" href="https://lk.wetrain.ru/">
+										Попробовать бесплатно
+									</a>
+									<img class="promo__box-icon" src="./assets/images/icons/arrow-btn.svg" alt="">
+									<p class="promo__box-text">
+										<span>нажми на кнопку и</span> найди первых учеников
+									</p>
+								</div>
+							</div>
+							<div class="promo__elem">
+								<img class="promo__elem-imgSmall" src="./assets/images/promo/1-1.png" alt="">
+								<img class="promo__elem-img" src="./assets/images/promo/1.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about">
+				<div class="about__wrapper">
+					<div class="container">
+						<h2 class="about__title title">
+							ЦИФРЫ <span class="title__fon">о нас</span>
+						</h2>
+						<div class="about__inner">
+							<div class="about__item">
+								<p class="about__item-num">
+									<span>1</span>
+									<span>0</span>
+									<span>0</span>
+									<span>0</span>
+									<span>+</span>
+								</p>
+								<p class="about__item-text">
+									<span>тренеров</span> в России и СНГ
+								</p>
+								<img class="about__item-line" src="./assets/images/about/line.svg" alt="">
+							</div>
+							<div class="about__item">
+								<p class="about__item-num">
+									<span>7</span>
+									<span>5</span>
+									<span>0</span>
+									<span>0</span>
+									<span>+</span>
+								</p>
+								<p class="about__item-text">
+									<span>пользователей</span> тренируются
+								</p>
+								<img class="about__item-line" src="./assets/images/about/line.svg" alt="">
+							</div>
+							<div class="about__item">
+								<p class="about__item-num">
+									<span>1</span>
+									<span>2</span>
+									<span>0</span>
+									<span>+</span>
+								</p>
+								<p class="about__item-text">
+									ежедневно <span>ищут тренера</span>
+								</p>
+								<img class="about__item-line" src="./assets/images/about/line.svg" alt="">
+							</div>
+						</div>
+						<picture class="about__bot">
+							<source srcset="./assets/images/about/bot-m.svg" media="(max-width: 576px)">
+							<img src="./assets/images/about/bot.svg" alt="Картинка с размерами">
+						</picture>
+					</div>
+			</section>
+
+			<section class="clients">
+				<div class="clients__wrapper">
+					<div class="container">
+						<h2 class="clients__title title">
+							Тренируй
+							<span class="title__fon">сотни</span>
+							<br>
+							клиентов
+						</h2>
+						<p class="clients__subtitle">
+							<span>Пользуясь WeTrain ты сократишь</span> ежедневное время работы на 30%
+						</p>
+						<div class="clients__inner">
+							<div class="clients__item">
+								<div class="clients__item-box">
+									<img class="clients__item-img clients__item-img--alt" src="./assets/images/clients/1.png" alt="">
+								</div>
+								<p class="clients__item-text">
+									Получи свою онлайн-визитку, размещай ее в соц. сетях и <span>получай новых клиентов</span>
+								</p>
+							</div>
+							<div class="clients__item">
+								<div class="clients__item-box">
+									<img class="clients__item-img" src="./assets/images/clients/2.png" alt="">
+								</div>
+								<p class="clients__item-text">
+									Забудь о поиске клиентов, привлечение <span>клиентов наша задача!</span>
+								</p>
+							</div>
+							<div class="clients__item">
+								<div class="clients__item-box">
+									<img class="clients__item-img" src="./assets/images/clients/3.png" alt="">
+								</div>
+								<p class="clients__item-text">
+									<span>Записывай собственные видео</span> и прикрепляй их к упражнениям
+								</p>
+							</div>
+							<div class="clients__item">
+								<div class="clients__item-box">
+									<img class="clients__item-img" src="./assets/images/clients/4.png" alt="">
+								</div>
+								<p class="clients__item-text">
+									<span>Найди клиентов и повысь медийность</span> за счет сотни клиентов ежедневно ищущих своего
+									тренера.
+								</p>
+							</div>
+							<div class="clients__item">
+								<div class="clients__item-box">
+									<img class="clients__item-img" src="./assets/images/clients/5.png" alt="">
+								</div>
+								<p class="clients__item-text">
+									Планируй и <span>отслеживай тренировки в календаре</span> с редактором упражнений и обратной связью
+								</p>
+							</div>
+						</div>
+						<picture class="clients__bot">
+							<source srcset="./assets/images/clients/bot-m.svg" media="(max-width: 576px)">
+							<img src="./assets/images/clients/bot.svg" alt="Картинка с размерами">
+						</picture>
+					</div>
+			</section>
+
+			<section class="info">
+				<div class="info__wrapper">
+					<div class="container">
+						<div class="info__inner">
+							<picture class="info__inner-bg">
+								<source srcset="./assets/images/info/bg-m.svg" media="(max-width: 992px)">
+								<img src="./assets/images/info/bg.svg" alt="Картинка с размерами">
+							</picture>
+							<p class="info__text">
+								Оставь конкурентов
+								<br>
+								<img class="info__text-icon" src="./assets/images/icons/message.svg" alt="">
+								работающих
+								<br>
+								<span class="hotPink">
+									через мессенджеры
+								</span>
+								<br>
+								<span class="bluishGreen">позади,</span>
+								<img class="info__text-icon info__text-icon--arrow" src="./assets/images/icons/arrow-right.svg" alt="">
+							</p>
+							<img class="info__img" src="./assets/images/info/1.png" alt="">
+							<p class="info__text">
+								используя
+								<br>
+								<span class="bluishGreen">
+									лучший сервис
+									<img class="info__text-icon" src="./assets/images/icons/star.svg" alt="">
+								</span>
+								<br>
+								онлайн-тренировок
+								<br>
+								2024 года!
+							</p>
+							<p class="info__text info__text--mobile">
+								Оставь конкурентов
+								<br>
+								<img class="info__text-icon" src="./assets/images/icons/message.svg" alt="">
+								работающих
+								<br>
+								<span class="hotPink">
+									через мессенджеры
+								</span>
+								<br>
+								<span class="bluishGreen">позади,</span>
+								используя
+								<span class="bluishGreen">
+									лучший сервис
+									<img class="info__text-icon" src="./assets/images/icons/star.svg" alt="">
+								</span>
+								<br>
+								онлайн-тренировок
+								<br>
+								2024 года!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="use">
+				<div class="use__wrapper">
+					<div class="container">
+						<div class="use__inner">
+							<div class="use__item">
+								<h2 class="use__item-title title">
+									Используй <span class="title__fon title__fon--initial">WeTrain</span> бесплатно с первым клиентом!
+								</h2>
+								<p class="use__item-text">
+									Создай анкету, увидь своих потенциальных клиентов и ощути как экономится время
+								</p>
+								<div class="use__free">
+									<p class="use__free-sum">
+										0Р
+									</p>
+									<p class="use__free-text">
+										Для клиентов сервис бесплатен.
+									</p>
+								</div>
+								<div class="use__box">
+									<picture class="use__box-icon">
+										<source srcset="./assets/images/icons/arrow-btn-bot-m.svg" media="(max-width: 576px)">
+										<img src="./assets/images/icons/arrow-btn-bot.svg" alt="Картинка с размерами">
+									</picture>
+									<a class="btn btn--small" href="https://lk.wetrain.ru/">
+										Попробовать бесплатно
+									</a>
+								</div>
+							</div>
+							<img class="use__img" src="./assets/images/use/1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="platform">
+				<div class="platform__wrapper">
+					<div class="container">
+						<div class="platform__inner">
+							<img class="platform__inner-bg" src="./assets/images/platform/bg.svg" alt="">
+							<h2 class="platform__title title title--dark">
+								Платформа <span class="title__fon">изнутри</span>
+							</h2>
+							<div class="platform__swiper swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img class="platform__img" src="./assets/images/platform/1.png" data-fancybox="gallery" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img class="platform__img" src="./assets/images/platform/2.png" data-fancybox="gallery" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img class="platform__img" src="./assets/images/platform/3.png" data-fancybox="gallery" alt="">
+									</div>
+								</div>
+								<div class="platform__arrow">
+									<div class="platform__arrow-prev swiper-button-prev"></div>
+									<div class="platform__arrow-next swiper-button-next"></div>
+								</div>
+							</div>
+							<div class="platform__box">
+								<p class="platform__box-text">
+									<span>Прикрепляй</span> за собой клиентов
+								</p>
+								<p class="platform__box-text">
+									<span>Создавай тренировки</span> с подробным описанием, добавляй видео
+								</p>
+								<p class="platform__box-text">
+									<span>Отслеживай выполнение тренировок</span> и получай обратную связь
+								</p>
+								<p class="platform__box-text">
+									<span>Создавай анкету,</span>
+									<br>
+									получи свою визитную карточку
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="step">
+				<div class="step__wrapper">
+					<div class="container">
+						<h2 class="step__title title">
+							Твои шаги <span class="title__fon title__fon--initial">в WeTrain</span>
+						</h2>
+						<div class="step__inner">
+							<div class="step__item">
+								<picture class="step__item-bg">
+									<source srcset="./assets/images/step/bg-m.svg" media="(max-width: 576px)">
+									<img src="./assets/images/step/bg.svg" alt="Картинка с размерами">
+								</picture>
+								<p class="step__item-num"></p>
+								<p class="step__item-text">
+									<span>Регистрируешься на платформе</span> и заполняешь свою анкету
+								</p>
+								<button class="step__btn btn btn--photo">
+									<i class="btn__icon">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M14.9322 4.53934H13.1624L12.1854 3.06456C11.8167 2.51151 11.1715 2.17969 10.5078 2.17969H6.45217C5.78852 2.17969 5.1433 2.51151 4.77461 3.06456L3.79756 4.53934H2.02782C0.903304 4.53934 0 5.44264 0 6.56716V13.7199C0 14.8444 0.903304 15.7477 2.02782 15.7477H14.9322C16.0567 15.7477 16.96 14.8444 16.96 13.7199V6.56716C16.96 5.44264 16.0567 4.53934 14.9322 4.53934ZM8.48 14.0885C5.95443 14.0885 3.90817 12.0423 3.90817 9.51673C3.90817 6.99116 5.95443 4.96334 8.48 4.96334C11.0056 4.96334 13.0518 7.0096 13.0518 9.53516C13.0518 12.0423 11.0056 14.0885 8.48 14.0885ZM14.6741 7.39673C14.6556 7.39673 14.6372 7.39673 14.6003 7.39673H13.8629C13.5311 7.37829 13.273 7.10177 13.2915 6.76995C13.3099 6.45655 13.5496 6.2169 13.8629 6.19847H14.6003C14.9322 6.18003 15.2087 6.43812 15.2271 6.76995C15.2456 7.10177 15.0059 7.37829 14.6741 7.39673Z"
+												fill="#484848" />
+											<path
+												d="M8.4815 6.99121C7.08046 6.99121 5.9375 8.13417 5.9375 9.53521C5.9375 10.9363 7.08046 12.0608 8.4815 12.0608C9.88254 12.0608 11.0255 10.9178 11.0255 9.51678C11.0255 8.11573 9.88254 6.99121 8.4815 6.99121Z"
+												fill="#484848" />
+										</svg>
+									</i>
+									Смотреть фото
+								</button>
+							</div>
+							<div class="step__item">
+								<picture class="step__item-bg">
+									<source srcset="./assets/images/step/bg-m.svg" media="(max-width: 576px)">
+									<img src="./assets/images/step/bg.svg" alt="Картинка с размерами">
+								</picture>
+								<p class="step__item-num"></p>
+								<p class="step__item-text">
+									Добавляешь уже существующих клиентов <span>и находишь новых</span>
+								</p>
+								<button class="step__btn btn btn--photo">
+									<i class="btn__icon">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M14.9322 4.53934H13.1624L12.1854 3.06456C11.8167 2.51151 11.1715 2.17969 10.5078 2.17969H6.45217C5.78852 2.17969 5.1433 2.51151 4.77461 3.06456L3.79756 4.53934H2.02782C0.903304 4.53934 0 5.44264 0 6.56716V13.7199C0 14.8444 0.903304 15.7477 2.02782 15.7477H14.9322C16.0567 15.7477 16.96 14.8444 16.96 13.7199V6.56716C16.96 5.44264 16.0567 4.53934 14.9322 4.53934ZM8.48 14.0885C5.95443 14.0885 3.90817 12.0423 3.90817 9.51673C3.90817 6.99116 5.95443 4.96334 8.48 4.96334C11.0056 4.96334 13.0518 7.0096 13.0518 9.53516C13.0518 12.0423 11.0056 14.0885 8.48 14.0885ZM14.6741 7.39673C14.6556 7.39673 14.6372 7.39673 14.6003 7.39673H13.8629C13.5311 7.37829 13.273 7.10177 13.2915 6.76995C13.3099 6.45655 13.5496 6.2169 13.8629 6.19847H14.6003C14.9322 6.18003 15.2087 6.43812 15.2271 6.76995C15.2456 7.10177 15.0059 7.37829 14.6741 7.39673Z"
+												fill="#484848" />
+											<path
+												d="M8.4815 6.99121C7.08046 6.99121 5.9375 8.13417 5.9375 9.53521C5.9375 10.9363 7.08046 12.0608 8.4815 12.0608C9.88254 12.0608 11.0255 10.9178 11.0255 9.51678C11.0255 8.11573 9.88254 6.99121 8.4815 6.99121Z"
+												fill="#484848" />
+										</svg>
+									</i>
+									Смотреть фото
+								</button>
+							</div>
+							<div class="step__item">
+								<picture class="step__item-bg">
+									<source srcset="./assets/images/step/bg-m.svg" media="(max-width: 576px)">
+									<img src="./assets/images/step/bg.svg" alt="Картинка с размерами">
+								</picture>
+								<p class="step__item-num"></p>
+								<p class="step__item-text">
+									<span>Увеличиваешь базу клиентов</span> и обновляешь тариф
+								</p>
+								<button class="step__btn btn btn--photo">
+									<i class="btn__icon">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M14.9322 4.53934H13.1624L12.1854 3.06456C11.8167 2.51151 11.1715 2.17969 10.5078 2.17969H6.45217C5.78852 2.17969 5.1433 2.51151 4.77461 3.06456L3.79756 4.53934H2.02782C0.903304 4.53934 0 5.44264 0 6.56716V13.7199C0 14.8444 0.903304 15.7477 2.02782 15.7477H14.9322C16.0567 15.7477 16.96 14.8444 16.96 13.7199V6.56716C16.96 5.44264 16.0567 4.53934 14.9322 4.53934ZM8.48 14.0885C5.95443 14.0885 3.90817 12.0423 3.90817 9.51673C3.90817 6.99116 5.95443 4.96334 8.48 4.96334C11.0056 4.96334 13.0518 7.0096 13.0518 9.53516C13.0518 12.0423 11.0056 14.0885 8.48 14.0885ZM14.6741 7.39673C14.6556 7.39673 14.6372 7.39673 14.6003 7.39673H13.8629C13.5311 7.37829 13.273 7.10177 13.2915 6.76995C13.3099 6.45655 13.5496 6.2169 13.8629 6.19847H14.6003C14.9322 6.18003 15.2087 6.43812 15.2271 6.76995C15.2456 7.10177 15.0059 7.37829 14.6741 7.39673Z"
+												fill="#484848" />
+											<path
+												d="M8.4815 6.99121C7.08046 6.99121 5.9375 8.13417 5.9375 9.53521C5.9375 10.9363 7.08046 12.0608 8.4815 12.0608C9.88254 12.0608 11.0255 10.9178 11.0255 9.51678C11.0255 8.11573 9.88254 6.99121 8.4815 6.99121Z"
+												fill="#484848" />
+										</svg>
+									</i>
+									Смотреть фото
+								</button>
+							</div>
+							<div class="step__item">
+								<picture class="step__item-bg">
+									<source srcset="./assets/images/step/bg-1m.svg" media="(max-width: 576px)">
+									<img src="./assets/images/step/bg-1.svg" alt="Картинка с размерами">
+								</picture>
+								<p class="step__item-num"></p>
+								<p class="step__item-text">
+									Находишь еще новых клиентов <span>и растешь в доходе</span>
+								</p>
+								<a class="step__btn btn btn--small btn--width" href="https://lk.wetrain.ru/">
+									Сделать первый шаг
+								</a>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section class="reviews">
+				<div class="reviews__wrapper">
+					<div class="container">
+						<h2 class="reviews__title title title--initial">
+							ЧТО <span class="title__fon">ГОВОРЯТ ТЕ,</span> 
+							<br>
+							КТО УЖЕ В WeTrain
+						</h2>
+						<div class="reviews__inner">
+							<div class="reviews__item">
+								<div class="reviews__user">
+									<img class="reviews__user-img" src="./assets/images/reviews/1.png" alt="">
+									<div class="reviews__user-box">
+										<p class="reviews__user-name">
+											Екатерина Солдатенко
+										</p>
+										<p class="reviews__user-who">
+											Тренер, основатель собственной студии фитнеса
+										</p>
+										<p class="reviews__user-social">
+											Instagram*: <span>@ktrnsoldatenko</span>
+										</p>
+									</div>
+								</div>
+								<img class="reviews__item-line" src="./assets/images/reviews/1.svg" alt="">
+								<p class="reviews__item-text">
+									До этого пользовалась зарубежным приложением, но после на него запретили подписку в России и
+									приобретать ее стало очень неудобно и дорого. <span>Затем мне посоветовали WeTrain и я тут же перевела
+										всех
+										своих клиентов туда. Очень удобное приложение!</span>
+								</p>
+								<p class="reviews__item-text">
+									Отдельное спасибо организаторам - всегда пойдут на встречу и исправят технические ошибки, пожелания и
+									рекомендации по интерфейсу. <span>Всегда спрашивают обратную связь о качестве обслуживания и стремятся
+										его
+										улучшить👍🏼 большое спасибо, буду пользоваться вашим приложением дальше!)</span>
+								</p>
+							</div>
+							<div class="reviews__item">
+								<div class="reviews__user">
+									<img class="reviews__user-img" src="./assets/images/reviews/2.png" alt="">
+									<div class="reviews__user-box">
+										<p class="reviews__user-name">
+											Мария
+										</p>
+										<p class="reviews__user-who">
+											Тренер, врач спортивной медицины
+										</p>
+										<p class="reviews__user-social">
+											Instagram*: <span>@marina_hodkevich</span>
+										</p>
+									</div>
+								</div>
+								<img class="reviews__item-line" src="./assets/images/reviews/1.svg" alt="">
+								<p class="reviews__item-text">
+									<span>В восторге от этого приложения😍 Самое лучшее и удобное приложение для тренеров и их
+										подопечных🔥</span>
+									Нигде нет такого крутого функционала!
+								</p>
+								<p class="reviews__item-text">
+									Это <span>намного удобнее, чем тренировки по файлу,</span> все доступно: пишешь технику, тут же
+									прикрепляешь видео.
+									Подопечным становится более понятно, как выполнять, следовательно, и результат круче) Не лагает, очень
+									удобное в использовании, пользуюсь им уже полгода) Советую это приложение абсолютно всем коллегам🔥
+									<span>Вы
+										лучшее разработчики, желаю дальнейшего процветания и успехов!))</span>
+								</p>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section class="faq">
+				<div class="faq__wrapper">
+					<div class="container">
+						<h2 class="faq__title title">
+							Вопросы и <span class="title__fon">ответы</span>
+						</h2>
+						<div class="faq__inner">
+							<div class="faq__accordion">
+								<div class="faq__accordion-item accordion">
+									<p class="faq__accordion-title">
+										Есть ли ограничения у бесплатной версии?
+										<img class="faq__accordion-icon" src="./assets/images/icons/arrow-bot.svg" alt="">
+									</p>
+									<div class="accordion__content">
+										<p class="faq__accordion-text">
+											Для каждого тренера доступен бесплатный тарифный план с полным функционалом сервиса. Единственное отличие заключается в том, что одновременно можно добавить только 1-го клиента. 
+											<br>
+											Когда ты убедишься в удобности платформы и захочешь вести больше клиентов, тогда сможешь выбрать другой тариф
+										</p>
+									</div>
+								</div>
+								<div class="faq__accordion-item accordion">
+									<p class="faq__accordion-title">
+										Должны ли мои клиенты платить за WeTrain?
+										<img class="faq__accordion-icon" src="./assets/images/icons/arrow-bot.svg" alt="">
+									</p>
+									<div class="accordion__content">
+										<p class="faq__accordion-text">
+											Нет, сервис абсолютно бесплатен для твоих клиентов. Ежемесячную подписку, если бесплатный тариф недостаточен, оплачивает только тренер.
+										</p>
+									</div>
+								</div>
+								<div class="faq__accordion-item accordion">
+									<p class="faq__accordion-title">
+										Буду ли я получать обратную связь от клиента?
+										<img class="faq__accordion-icon" src="./assets/images/icons/arrow-bot.svg" alt="">
+									</p>
+									<div class="accordion__content">
+										<p class="faq__accordion-text">
+											Да, после каждого выполненного упражнения клиент оставляет комментарий, где рассказывает как выполнил задание: с какими проблемами столкнулся, или какие веса удалось преодолеть. Ты сможешь удобно отслеживать прогресс по каждому упражнению.
+										</p>
+									</div>
+								</div>
+								<div class="faq__accordion-item accordion">
+									<p class="faq__accordion-title">
+										Как я смогу найти новых клиентов на платформе?
+										<img class="faq__accordion-icon" src="./assets/images/icons/arrow-bot.svg" alt="">
+									</p>
+									<div class="accordion__content">
+										<p class="faq__accordion-text">
+											Для того, чтобы помочь тренерам найти новых клиентов, в WeTrain можно создать собственную анкету тренера. Огромное количество клиентов ежедневно заходит на платформу чтобы найти своего тренера, покажи им себя!
+										</p>
+									</div>
+								</div>
+								<div class="faq__accordion-item accordion">
+									<p class="faq__accordion-title">
+										Насколько WeTrain удобен для тренера и клиента?
+										<img class="faq__accordion-icon" src="./assets/images/icons/arrow-bot.svg" alt="">
+									</p>
+									<div class="accordion__content">
+										<p class="faq__accordion-text">
+											Платформа сильно оптимизирует все процессы как для тебя, тренера, так и для твоего клиента. Тебе больше не нужно долго составлять программы в Word и каждый раз напоминать о новой тренировке, а клиент теперь поочередно выполняет каждое задание с подробной инструкцией и автоматически отправляет тебе свои результаты.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="faq__box">
+								<p class="faq__box-text">
+									Не нашли ответ на свой вопрос?
+									<span>Напишите нам</span>
+								</p>
+								<a class="btn btn--faq btn--small btn--width" href="https://t.me/WeTrain_help" target="_blank">
+									Задать свой вопрос
+								</a>
+							</div>
+						</div>
+					</div>
+			</section>
+
+		</main>
+
+		<footer class="footer"></footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script src="./scripts/scripts.js"></script>
+
+</body>
+
+</html>
