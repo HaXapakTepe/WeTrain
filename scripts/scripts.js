@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const body = document.querySelector('body')
 	const burger = document.querySelector('.burger')
 	const menu = document.querySelector('.menu')
-	const menuItem = document.querySelectorAll('.menu__item')
+	const menuItem = document.querySelectorAll('.menu__link')
 
 	const toggleMenu = () => {
 		menu.classList.toggle('menu--active')
@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	burger.addEventListener('click', toggleMenu)
-	menuItem.forEach(item => {
-		item.addEventListener('click', toggleMenu)
-	})
+	if (innerWidth < 993) {
+		menuItem.forEach(item => {
+			item.addEventListener('click', toggleMenu)
+		})
+	}
 	document.addEventListener('click', clickOutsideMenu)
 
 	const accordion = document.querySelectorAll('.accordion')
@@ -40,9 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
-  Fancybox.bind('[data-fancybox]', {
-    // Your custom options
-  })
+	Fancybox.bind('[data-fancybox]', {
+		// Your custom options
+	})
+
+	const menuLinks = document.querySelectorAll('[class][data-goto]')
+
+	if (menuLinks.length > 0) {
+		menuLinks.forEach(link => {
+			link.addEventListener('click', onMenuLinkClick)
+		})
+
+		function onMenuLinkClick(e) {
+			const link = e.target
+			if (link.dataset.goto && document.querySelector(link.dataset.goto)) {
+				const gotoBlock = document.querySelector(link.dataset.goto)
+				const gotoBlockValue = gotoBlock.getBoundingClientRect().top - 50
+				window.scrollBy({
+					top: gotoBlockValue,
+					behavior: 'smooth',
+				})
+				e.preventDefault()
+			}
+		}
+	}
 
 	if (document.querySelector('.platform__swiper')) {
 		var platformSwiper = new Swiper('.platform__swiper', {
