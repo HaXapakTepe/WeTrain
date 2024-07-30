@@ -4,6 +4,10 @@
       &__wrapper {
         @include fluid(margin-top, 52px, 80px);
         @include fluid(margin-bottom, 45px, 156px);
+
+        &::after {
+          content: none
+        }
       }
 
       &__title {
