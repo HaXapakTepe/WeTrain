@@ -20,23 +20,82 @@
     background: linear-gradient(90deg, #ff4f86 0%, #df245f 100%);
     transition: opacity 0.23s ease-in-out;
     opacity: 0;
+    pointer-events: none;
   }
 
-  &:has(.role__item:first-child .role__item-link:hover) {
-    .role__left {
-      &-img {
-        opacity: 0;
+  &:has(.role__left-link:hover) {
+    .role {
+      &__left {
+        &-img {
+          opacity: 0;
 
-        &:last-child {
-          opacity: 1;
+          &:last-child {
+            opacity: 1;
+          }
+        }
+      }
+
+      &__item:first-child {
+        .role__item {
+
+          &-letter,
+          &-text,
+          &-textBot {
+            span {
+              &:first-child {
+                opacity: 0;
+              }
+
+              &:last-child {
+                opacity: 1;
+              }
+            }
+          }
+
+          &-icon {
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
         }
       }
     }
   }
 
-  &:has(.role__item:last-child .role__item-link:hover) {
+  &:has(.role__right-link:hover) {
     &::after {
       opacity: 1;
+    }
+
+    .role {
+      &__item:last-child {
+        .role__item {
+
+          &-letter,
+          &-text,
+          &-textBot {
+            span {
+              &:first-child {
+                opacity: 0;
+              }
+
+              &:last-child {
+                opacity: 1;
+              }
+            }
+          }
+
+          &-icon {
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -47,8 +106,17 @@
     top: 0;
     width: 52.5%;
     height: 100%;
-    pointer-events: none;
     z-index: 1;
+
+    &-link {
+      position: absolute;
+      left: -10.8%;
+      top: -5%;
+      width: 105%;
+      height: 105%;
+      transform: rotate(6deg);
+      pointer-events: auto;
+    }
 
     &-img {
       width: 100%;
@@ -58,6 +126,7 @@
       object-fit: cover;
       -o-object-position: top right;
       object-position: top right;
+      pointer-events: none;
 
       &:last-child {
         position: absolute;
@@ -71,11 +140,20 @@
   &__right {
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     width: 47.5%;
     height: 100%;
-    pointer-events: none;
+
+    &-link {
+      position: absolute;
+      right: -3.8%;
+      top: -5%;
+      width: 110%;
+      height: 105%;
+      transform: rotate(6deg);
+      pointer-events: auto;
+    }
 
     &-img {
       width: 100%;
@@ -85,6 +163,7 @@
       object-fit: cover;
       -o-object-position: top right;
       object-position: top right;
+      pointer-events: none;
 
       &:last-child {
         position: absolute;
@@ -97,6 +176,7 @@
 
   .container {
     z-index: 2;
+    pointer-events: none;
   }
 
   &__img {
@@ -105,7 +185,7 @@
     left: 50%;
     transform: translateX(-50%);
     @include fluid(width, 600px, 1208px);
-    @include fluid(height, 226px, 479px);
+    @include fluid(height, 226px, 375px);
     z-index: 2;
   }
 
@@ -160,31 +240,6 @@
 
     &:last-child {
       .role__item {
-        &:hover {
-
-          &-letter,
-          &-text,
-          &-textBot {
-            span {
-              &:first-child {
-                opacity: 0;
-              }
-
-              &:last-child {
-                opacity: 1;
-              }
-            }
-          }
-
-          &-icon {
-            svg {
-              path {
-                fill: #fff;
-              }
-            }
-          }
-        }
-
         &-letter {
           span {
             background: linear-gradient(142deg, #d2d4dd 0%, rgba(210, 212, 221, 0) 100%);
@@ -223,34 +278,6 @@
               background: linear-gradient(90deg, #ffd9e4 0%, #fff2f7 100%);
               -webkit-background-clip: text;
               background-clip: text;
-            }
-          }
-        }
-      }
-    }
-
-    &:hover {
-
-      .role__item {
-
-        &-letter,
-        &-text,
-        &-textBot {
-          span {
-            &:first-child {
-              opacity: 0;
-            }
-
-            &:last-child {
-              opacity: 1;
-            }
-          }
-        }
-
-        &-icon {
-          svg {
-            path {
-              fill: #fff;
             }
           }
         }
@@ -379,6 +406,10 @@
       content: none;
     }
 
+    .container {
+      pointer-events: auto;
+    }
+
     &__img {
       width: 100%;
       height: 100%;
@@ -402,67 +433,16 @@
       max-width: 335px;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 85px;
-      padding-bottom: 70px;
       width: 100%;
 
-      &:hover {
-
-        .role__item {
-
-          &-letter,
-          &-text,
-          &-textBot {
-            span {
-              &:first-child {
-                opacity: 1;
-              }
-
-              &:last-child {
-                opacity: 0;
-              }
-            }
-          }
-
-          &-icon {
-            svg {
-              path {
-                fill: #046059;
-              }
-            }
-          }
-        }
+      &-link {
+        padding-top: 85px;
+        padding-bottom: 70px;
       }
-
 
       &:last-child {
 
         .role__item {
-          &:hover {
-
-            &-letter,
-            &-text,
-            &-textBot {
-              span {
-                &:first-child {
-                  opacity: 1;
-                }
-
-                &:last-child {
-                  opacity: 0;
-                }
-              }
-            }
-
-            &-icon {
-              svg {
-                path {
-                  fill: #BA184B;
-                }
-              }
-            }
-          }
-
           &-icon {
             svg {
               path {
